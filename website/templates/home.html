@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %} Nomeador de Startups {% endblock %}
+{% block content %}
+<br>
+<h1 align="center">Nomeador de Startups</h1>
+<br>
+<div id="container" class="container" align="center">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="container" id="input-text">
+                <label class="label" for="textarea">Breve descrição da Startup:</label>
+                <br>
+                <br>
+                <textarea id="input-textarea" name="textarea" rows="10" cols="50"></textarea>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="container" id="output-text">
+                <label class="label" for="textarea">Nomes sugeridos:</label>
+                <br>
+                <br>
+                <textarea id="output-textarea" name="textarea" rows="10" cols="50" readonly="True"></textarea>
+            </div>
+        </div>
+    </div>
+    <br>
+    <button class="btn-hover color-7" onclick="GenerateNames()">Sugerir Nomes</button>
+</div>
+
+
+
+
+{% endblock %}
