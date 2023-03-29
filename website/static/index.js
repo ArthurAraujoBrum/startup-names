@@ -3,12 +3,10 @@ function GenerateNames(){
     const OutputText = document.getElementById(`output-textarea`);
 
     let InputData = new FormData()
-    InputData.append("input_text", InputText)
+    InputData.append("input_text", InputText.value)
 
     fetch(`/generate_names`, {"method":"POST", "body":InputData})
     .then((res) => res.json())
     .then((data) => {OutputText.innerHTML = data["output_text"];});
-
-
-
+    
 }
