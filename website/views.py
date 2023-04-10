@@ -13,7 +13,7 @@ def home():
 @views.route('/generate_names', methods=['POST'])
 def generate_names():
     input_text = request.form.get('input_text')
-    prompt_text = "Sugira nomes para uma startup com a seguinte descrição: "
+    prompt_text = "Sugira nomes em português para uma startup com a seguinte descrição: "
     response = openai.Completion.create(
     model="text-davinci-003",
     prompt= prompt_text + input_text,

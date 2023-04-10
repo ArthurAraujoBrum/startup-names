@@ -14,7 +14,7 @@ body{
 }
 
 textarea{
-    resize: none;
+    resize: vertical;
 }
 
 .buttons {
